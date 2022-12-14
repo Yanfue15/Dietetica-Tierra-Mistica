@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background: #a6e644;
+    color: #f5f4f3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.contenedor {
+    width: 98%;
+    margin: auto;
+}
+
+h1{
+    float: left;
+}
+
+header .contenedor{
+    display: table;
+}
+
+/* MENU*/
+
+.menu-bar {
+    display: none;
+}
+
+header label {
+    float: right;
+    font-size: 28px;
+    margin: 6px 0;
+    cursor: pointer; /* aparece una manito cuando pasamos con el cursor*/
+}
+
+
+section{
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.bienvenidos {
+ 
+    text-align: center;
+}
+
+.menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(199, 167, 144, 0.9);
+    transition: all 0.5s;
+    transform: translateX(-100%);
+}
+
+.menu a {
+    display: block;
+    color: #f5f4f3;
+    height: 50px;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: 1px solid rgba(166, 230, 68, 0.3);
+}
+
+
+.menu a:hover {
+    background: rgba(166, 230, 68, 0.3);
+    /*Cambia de color al pasar con el mause*/
+}
+
+.menu-bar:checked ~ .menu {
+    transform: translateX(0%);
+
+}
+
+/*Banner*/
+
+.banner {
+margin-top: 50px;
+position: relative;
+
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    opacity: 50%;
+}
+/*Cuidemos el envace es el unico que tenemos*/
+.banner .contenedor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color:#a6e644;
+}
+/* "cuidemos el evace es el unico que tenemos*/
+.banner h2 {
+    font-size: 28px;
+}
+
+/*Bienvenidos a tierra mistica*/
+
+.bienvenidos{
+    text-align: center;
+    color: #a6e644;
+  
+}
+
+
+/*Blog-parte de las fotos*/
+
+.blog h3, h4 {
+    text-align: center;
+    color: #a6e644;
+}
+
+
+.blog .contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+
+.blog article {
+    margin: 15px;
+}
+
+.blog img {
+    width: 100%;
+    max-width: 200px;
+}
+
+/* Cuadro fotos circulares*/
+
+/* Fondo */
+.info {
+    background-color: #a6e644;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.info h5, h6 {
+    color: #f5f4f3;
+    font-size: large;
+}
+
+
+
+#info .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+
+
+.info-pet{
+    margin: 20px;
+
+}
+
+.info-pet img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 7px solid #f5f4f3;
+}
+
+/*sesion contato y mapa*/
+
+/* Seccion Contacto*/
+
+.contacto{
+    background-image: url(MAPA/Mapa.jpg);
+    background-color: #1c1c1c;
+    color: #f5f4f3;
+    padding: 50px 0;
+}
+
+.contacto .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contacto h2{
+    font-size: 48px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+.contacto .fila{
+    display: flex;
+}
+
+.contacto .col{
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+
+.contacto .col input,  .contacto .col textarea {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #1c1c1c;
+    color: #f5f4f3;
+    font-size: 18px;
+}
+
+.contacto button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #f5f4f3;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #f5f4f3;
+    position: relative;
+    z-index: 10;
+}
+
+.contacto button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #a6e644;
+    z-index: -1;
+    transition: 1s;
+
+}
+
+.contacto button:hover .overlay {
+    width: 100%;
+}
+
+.contacto .col img {
+    width: 100%;
+}
+
+.contacto .col .info{
+    position: absolute;
+    top: 40%;
+    background-color: #1c1c1c;
+    padding: 20px;
+    max-width: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contacto .col .info ul{
+    list-style: none;
+}
+
+.contacto .col .info ul li {
+    margin-bottom: 20px;
+}
+
+.contacto .col .info ul li i {
+    color: #a6e644;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+
+
+/*footer*/
+
+footer .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+
+.redes {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+}
+
+.redes a {
+    color: #f5f4f3;
+    text-decoration: none;
+}
